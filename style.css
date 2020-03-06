@@ -1,0 +1,74 @@
+html,body {
+  height: 100%;
+}
+
+.main {
+    width: auto;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.article {
+    display: block;
+    width: auto;
+    height: 50%;
+    text-align: center;
+    position: relative;
+}
+
+.content {
+    position: relative;
+    top: 50%;
+    -webkit-transform : translateY(-50%);
+    transform : translateY(-50%);
+}
+
+.time_box {
+    display: inline-block;
+    width: 30%;
+}
+
+.time_box span {
+    margin: 0; 
+    padding: 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+#minute_shower {
+    font-size: 10em;
+}
+
+#second_shower {
+    font-size: 10em;
+}
+
+#text {
+    font-size: 3em;
+}
+
+.button_circle {
+    display: inline-block;
+    width: 10em;
+    height: 10em;
+    line-height: 10em;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.button_circle p {
+    margin: 0%;
+    font-size: 250%;
+    color: white;
+    font-weight: bold;
+}
+
+#start {
+    background: red;
+    margin-right: 7em;
+}
+
+#clear {
+    background: blue;
+    margin-left: 7em;
+}
