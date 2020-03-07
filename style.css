@@ -53,36 +53,22 @@ html,body {
     height: 10em;
     line-height: 10em;
     border-radius: 50%;
-    overflow: hidden;
-    transition: 1s;
     text-align: center;
 }
-.button_circle:hover {
-    -webkit-transform: rotateY(360deg);
-    transform: rotateY(360deg);
-}
-
 
 .button_circle p {
     margin: 0%;
     font-size: 250%;
+    color: white;
     font-weight: bold;
 }
 
 #start {
-    border: double 4px red;
-    margin-right: 7em;
-    color: red;
-}
-#start:active {
     background: red;
+    margin-right: 7em;
 }
 
 #clear {
-    border: double 4px blue;
-    margin-left: 7em;
-    color: blue;
-}
-#clear:active {
     background: blue;
+    margin-left: 7em;
 }
