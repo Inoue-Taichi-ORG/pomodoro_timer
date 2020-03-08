@@ -15,6 +15,7 @@ function Init() {
     if (TIMER) {
         clearInterval(TIMER);
     }
+    Title_Text_Setter(IS_WORKING);
     Timer_Setter(IS_WORKING);
 }
 
@@ -25,6 +26,7 @@ function Clear() {
         clearInterval(TIMER);
     }
     TIME = 0;
+    Title_Text_Setter(IS_WORKING, true)
     Count_Show(TIME);
 }
 
@@ -46,7 +48,17 @@ function Count_Show(time) {
 
 function Switch_Count() {
     IS_WORKING = !IS_WORKING;
+    Title_Text_Setter(IS_WORKING);
     Timer_Setter(IS_WORKING);
+}
+
+function Title_Text_Setter(is_working, clicked_clear = false) {
+    if (clicked_clear) {
+        title_text.innerHTML = "ポモドーロタイマー";
+        return;
+    }
+    const text = is_working ? "WORK TIME" : "BREAK TIME";
+    title_text.innerHTML = text;
 }
 
 function Timer_Setter(is_working) {
