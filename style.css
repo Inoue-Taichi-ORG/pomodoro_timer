@@ -1,5 +1,6 @@
 html,body {
   height: 100%;
+  margin: 0;
 }
 
 .main {
@@ -33,13 +34,6 @@ html,body {
     padding: 0;
     text-align: center;
     font-weight: bold;
-}
-
-#minute_shower {
-    font-size: 10em;
-}
-
-#second_shower {
     font-size: 10em;
 }
 
