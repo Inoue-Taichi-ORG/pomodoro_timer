@@ -19,6 +19,12 @@ function Init() {
         clearInterval(TIMER);
     }
     Count_Show(TIME);
+    Button_Text_Setter(IS_IDOL);
+}
+
+function Button_Text_Setter(is_idol) {
+    const text = is_idol ? "START" : "CLEAR";
+    button_text.innerHTML = text;
 }
 
 function Timer_Setter(is_working) {
@@ -65,8 +71,8 @@ function Title_Text_Setter(is_working, clicked_clear = false) {
         title_text.innerHTML = "ポモドーロタイマー";
         return;
     }
-    const time_status = is_working ? "WORK TIME" : "BREAK TIME";
-    title_text.innerHTML = time_status;
+    const text = is_working ? "WORK TIME" : "BREAK TIME";
+    title_text.innerHTML = text;
 }
 
 Init();
