@@ -19,13 +19,13 @@ function Init() {
         clearInterval(TIMER);
     }
     Count_Show(TIME);
-    Button_Text_Setter(IS_IDOL);
+    Button_Status_Setter(IS_IDOL);
     Title_Text_Setter(IS_WORKING,true);
 }
 
 function Start() {
     IS_IDOL = false;
-    Button_Text_Setter(IS_IDOL);
+    Button_Status_Setter(IS_IDOL);
     Title_Text_Setter(IS_WORKING);
     Timer_Setter(IS_WORKING);
 }
@@ -43,12 +43,15 @@ function Click_Button() {
     }
 }
 
-function Button_Text_Setter(is_idol) {
-    // https://www.nishishi.com/javascript-tips/element-bgcolor.html
-    // これもいれる
-    // Button_Status_Setterとかで実装する
-    text = is_idol ? "START" : "CLEAR";
-    button_text.innerHTML = text;
+function Button_Status_Setter(is_idol) {
+    const text              = is_idol ? "START"   : "CLEAR";
+    const back_ground_color = is_idol ? "red"     : "green";
+    const border_color      = is_idol ? "#ff7070" : "#308030";
+    button_text.innerHTML   = text;
+
+    const button = document.getElementById("button_circle");
+    button.style.backgroundColor = back_ground_color;
+    button.style.borderBottomColor = border_color;
 }
 
 function Timer_Setter(is_working) {

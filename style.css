@@ -54,11 +54,10 @@ html,body {
     line-height: 10em;
     border-radius: 50%;
     overflow: hidden;
-    border-bottom: solid 3px #ff7070;
+    border-bottom: solid 3px;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
     transition: .4s;
     text-align: center;
-    background-color: red;
 }
 .button_circle:active {
     -webkit-transform: translateY(2px);
