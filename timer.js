@@ -20,10 +20,31 @@ function Init() {
     }
     Count_Show(TIME);
     Button_Text_Setter(IS_IDOL);
+    Title_Text_Setter(IS_WORKING,true);
+}
+
+function Start() {
+    IS_IDOL = false;
+    Button_Text_Setter(IS_IDOL);
+    Title_Text_Setter(IS_WORKING);
+    Timer_Setter(IS_WORKING);
+}
+
+function Clear() {
+    Init();
+}
+
+function Click_Button() {
+    if (IS_IDOL) {
+        Start();
+    }
+    else {
+        Clear();
+    }
 }
 
 function Button_Text_Setter(is_idol) {
-    const text = is_idol ? "START" : "CLEAR";
+    text = is_idol ? "START" : "CLEAR";
     button_text.innerHTML = text;
 }
 
