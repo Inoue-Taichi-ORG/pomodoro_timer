@@ -95,11 +95,13 @@ function Switch_Count() {
 
 function Title_Text_Setter(is_working, clicked_clear = false) {
     if (clicked_clear) {
-        title_text.innerHTML = "ポモドーロタイマー";
+        title_text.innerHTML  = "ポモドーロタイマー";
+        time_status.innerHTML = "";
         return;
     }
     const text = is_working ? "WORK TIME" : "BREAK TIME";
-    title_text.innerHTML = text;
+    title_text.innerHTML  = text;
+    time_status.innerHTML = text;
 }
 
 Init();
