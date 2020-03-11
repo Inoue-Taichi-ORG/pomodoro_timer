@@ -1,5 +1,5 @@
-const WORK_TIME = 25 * 60;
-const BREAK_TIME = 5 * 60;
+const WORK_TIME = /*25 * 60*/3;
+const BREAK_TIME = /*5 * 60*/1;
 const TEA_TIME = 30 * 60;
 const WORK_BREAK_SET = 4;
 const CLOCK_MSEC = 1000;
@@ -57,8 +57,8 @@ function Title_Text_Setter(is_working, clicked_clear = false) {
         title_text.innerHTML = "ポモドーロタイマー";
         return;
     }
-    const text = is_working ? "WORK TIME" : "BREAK TIME";
-    title_text.innerHTML = text;
+    const time_status = is_working ? "WORK TIME" : "BREAK TIME";
+    title_text.innerHTML = time_status;
 }
 
 function Timer_Setter(is_working) {
