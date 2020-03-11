@@ -8,26 +8,34 @@ var TIMER;
 var TIME = 0;
 var NOW_SET = 0;
 var IS_WORKING = true;
+var IS_IDOL = true;
 
 function Init() {
     NOW_SET = 0;
     IS_WORKING = true;
+    TIME = WORK_TIME;
+    IS_IDOL = true;
     if (TIMER) {
         clearInterval(TIMER);
     }
-    Title_Text_Setter(IS_WORKING);
-    Timer_Setter(IS_WORKING);
+    Count_Show(TIME);
 }
 
-function Clear() {
-    NOW_SET = 0;
-    IS_WORKING = true;
-    if (TIMER) {
-        clearInterval(TIMER);
+function Timer_Setter(is_working) {
+    if (is_working) {
+        NOW_SET++;
+        TIME = WORK_TIME;
     }
-    TIME = 0;
-    Title_Text_Setter(IS_WORKING, true)
-    Count_Show(TIME);
+    else {
+        if (NOW_SET >= WORK_BREAK_SET) {
+            TIME = TEA_TIME;
+            NOW_SET = 0;
+        }
+        else {
+            TIME = BREAK_TIME;
+        }
+    }
+    TIMER = setInterval(function () { Count_Down() }, CLOCK_MSEC);
 }
 
 function Count_Down() {
@@ -61,19 +69,4 @@ function Title_Text_Setter(is_working, clicked_clear = false) {
     title_text.innerHTML = time_status;
 }
 
-function Timer_Setter(is_working) {
-    if (is_working) {
-        NOW_SET++;
-        TIME = WORK_TIME;
-    }
-    else {
-        if (NOW_SET >= WORK_BREAK_SET) {
-            TIME = TEA_TIME;
-            NOW_SET = 0;
-        }
-        else {
-            TIME = BREAK_TIME;
-        }
-    }
-    TIMER = setInterval(function () { Count_Down() }, CLOCK_MSEC);
-}
+Init();
