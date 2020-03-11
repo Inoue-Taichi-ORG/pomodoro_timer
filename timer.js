@@ -1,5 +1,5 @@
-const WORK_TIME = /*25 * 60*/3;
-const BREAK_TIME = /*5 * 60*/1;
+const WORK_TIME = 25 * 60;
+const BREAK_TIME = 5 * 601;
 const TEA_TIME = 30 * 60;
 const WORK_BREAK_SET = 4;
 const CLOCK_MSEC = 1000;
