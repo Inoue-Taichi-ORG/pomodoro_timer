@@ -56,10 +56,16 @@ html,body {
     overflow: hidden;
     transition: 1s;
     text-align: center;
+    border: double 4px red;
+    margin-right: 7em;
+    color: red;
 }
 .button_circle:hover {
     -webkit-transform: rotateY(360deg);
     transform: rotateY(360deg);
+}
+.button_circle:active {
+    background: red;
 }
 
 
@@ -67,22 +73,4 @@ html,body {
     margin: 0%;
     font-size: 250%;
     font-weight: bold;
-}
-
-#start {
-    border: double 4px red;
-    margin-right: 7em;
-    color: red;
-}
-#start:active {
-    background: red;
-}
-
-#clear {
-    border: double 4px blue;
-    margin-left: 7em;
-    color: blue;
-}
-#clear:active {
-    background: blue;
 }
