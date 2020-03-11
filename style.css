@@ -54,23 +54,23 @@ html,body {
     line-height: 10em;
     border-radius: 50%;
     overflow: hidden;
-    transition: 1s;
+    border-bottom: solid 3px #ff7070;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+    transition: .4s;
     text-align: center;
-    border: double 4px red;
-    margin-right: 7em;
-    color: red;
-}
-.button_circle:hover {
-    -webkit-transform: rotateY(360deg);
-    transform: rotateY(360deg);
+    background-color: red;
 }
 .button_circle:active {
-    background: red;
-}
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+    border-bottom: none;
+  }
 
 
 .button_circle p {
     margin: 0%;
     font-size: 250%;
+    color: white;
     font-weight: bold;
 }

@@ -44,6 +44,9 @@ function Click_Button() {
 }
 
 function Button_Text_Setter(is_idol) {
+    // https://www.nishishi.com/javascript-tips/element-bgcolor.html
+    // これもいれる
+    // Button_Status_Setterとかで実装する
     text = is_idol ? "START" : "CLEAR";
     button_text.innerHTML = text;
 }
