@@ -3,7 +3,7 @@
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<title>
+<title id="title_text">
     ポモドーロタイマー
 </title>
 
@@ -12,25 +12,21 @@
         <div class="article">
             <div class="content">
                 <div class="time_box">
-                    <span id="minute_shower">0</span><span id="text">min</span>
+                    <span id="minute_shower"></span><span id="time_text">min</span>
                 </div>
-
                 <div class="time_box">
-                    <span id="second_shower">0</span><span id="text">sec</span>
+                    <span id="second_shower"></span><span id="time_text">sec</span>
                 </div>
+                <span id="time_status"></span>
             </div>
         </div>
         <div class="article">
             <div class="content">
-                <div class="button_circle" id="start" onclick="Init()">
-                    <p>START</p>
-                </div>
-                <div class="button_circle" id="clear" onclick="Clear()">
-                    <p>CLEAR</p>
+                <div class="button_circle" id="button_circle" onclick="Click_Button()">
+                    <span id="button_text"></span>
                 </div>
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="timer.js">
-    </script>
+    <script type="text/javascript" src="timer.js"></script>
 </body>
